@@ -1,0 +1,28 @@
+# Byte-compiled / cached files
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Flask / Django logs
+*.log
+
+# SQLite database files
+*.sqlite3
+app.db
+
+# MacOS system files
+.DS_Store
+
+# IDE settings
+.vscode/
+.idea/
+
+clean_data.ipynb
+get_data.py
