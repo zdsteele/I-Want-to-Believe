@@ -2,8 +2,31 @@
 
 {% block title %}Home - Flask App{% endblock %}
 
-{% block content %}
-    <h1>Welcome to the Flask App</h1>
-    <p>This is a basic Flask application with Bootstrap, Plotly, and D3.js.</p>
+{% block hero %}
+    {% include "hero.html" %}
+{% endblock %}
 
+
+{% block content %}
+    
+
+<div class="map-container">
+    <div id="map"></div>
+</div>
+   
+        <!-- Legend -->
+        <div id="legend">
+            <h4>UFO Sightings Density</h4>
+            <div><span style="background: #001f3f"></span> Low</div>
+            <div><span style="background: #7DF9FF"></span> Moderate</div>
+            <div><span style="background: #A020F0"></span> High</div>
+            <div><span style="background: #00FF00"></span> Very High</div>
+            <div><span style="background: #39FF14"></span> Hotspot</div>
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
 {% endblock %}
